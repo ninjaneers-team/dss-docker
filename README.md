@@ -1,9 +1,15 @@
-# Docker container for eSignature of CEF Digital
+# Docker container for Digital Signature Service (eSignature) of CEF Digital
 
-see [eSignature Service](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/DSS)
+This Dockerfile will provide the current Digital Signature Service Demo of CEF in version 5.5
+
+@see [eSignature Service](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/DSS)
+
+## Usage
+
+### Docker run
+`docker run --rm --ti -p 8080:8080 ninjaneers/dss:latest`
 
 
+### Docker Compose
 
-## Docker Hub
-
-[Repository](https://hub.docker.com/r/ninjaneers/dss)
+`docker-compose up` will expose DSS on http://localhost:8080

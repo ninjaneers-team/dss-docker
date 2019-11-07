@@ -1,10 +1,9 @@
-FROM openjdk:8
+FROM openjdk:8-alpine
 LABEL maintainer="info@ninjaneers.de"
 LABEL "author"="Dennis Fricke"
 LABEL "company"="Ninjaneers GmbH"
 
-RUN  apt-get update -y && apt-get install -y unzip \
-    && rm -rf /var/lib/apt/lists/*
+RUN  apk update && apk add unzip
 
 ADD https://ec.europa.eu/cefdigital/artifact/repository/esignaturedss/eu/europa/ec/joinup/sd-dss/dss-demo-bundle/5.5/dss-demo-bundle-5.5.zip /tmp
 RUN unzip /tmp/dss-demo-bundle-5.5.zip -d /tmp

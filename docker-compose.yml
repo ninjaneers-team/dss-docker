@@ -1,0 +1,7 @@
+version: '3.6'
+
+services:
+  dss:
+    image: 'ninjaneers/dss:latest'
+    ports:
+      - '8080:8080'
