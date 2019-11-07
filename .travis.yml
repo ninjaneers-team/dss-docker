@@ -1,0 +1,18 @@
+language: node_js
+sudo: required
+
+node_js:
+  - "10"
+  
+services:
+  - docker
+
+branches:
+  only:
+  - master
+
+install:
+  - npm install -g semantic-release @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/github @semantic-release/git
+
+script:
+  - semantic-release
